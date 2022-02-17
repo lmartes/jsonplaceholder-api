@@ -1,0 +1,6 @@
+framework module Pods_jsonplaceholder_api {
+  umbrella header "Pods-jsonplaceholder-api-umbrella.h"
+
+  export *
+  module * { export * }
+}
