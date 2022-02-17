@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		84CBE38427BE0A3200BA140D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE38327BE0A3200BA140D /* AppDelegate.swift */; };
 		84CBE38627BE0A3200BA140D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE38527BE0A3200BA140D /* SceneDelegate.swift */; };
-		84CBE38827BE0A3200BA140D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE38727BE0A3200BA140D /* ViewController.swift */; };
+		84CBE38827BE0A3200BA140D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE38727BE0A3200BA140D /* UserListViewController.swift */; };
 		84CBE38B27BE0A3200BA140D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CBE38927BE0A3200BA140D /* Main.storyboard */; };
 		84CBE38D27BE0A3400BA140D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CBE38C27BE0A3400BA140D /* Assets.xcassets */; };
 		84CBE39027BE0A3400BA140D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CBE38E27BE0A3400BA140D /* LaunchScreen.storyboard */; };
 		84CBE39D27BE94B100BA140D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE39C27BE94B100BA140D /* AppConstants.swift */; };
+		84CBE3A027BEA39B00BA140D /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE39F27BEA39B00BA140D /* UserListTableViewCell.swift */; };
+		84CBE3A327BEA81900BA140D /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3A227BEA81900BA140D /* UserEntity.swift */; };
 		A3007227651268DF2609B6A5 /* Pods_jsonplaceholder_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +24,14 @@
 		84CBE38027BE0A3200BA140D /* jsonplaceholder-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jsonplaceholder-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CBE38327BE0A3200BA140D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CBE38527BE0A3200BA140D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84CBE38727BE0A3200BA140D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84CBE38727BE0A3200BA140D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		84CBE38A27BE0A3200BA140D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84CBE38C27BE0A3400BA140D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CBE38F27BE0A3400BA140D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CBE39127BE0A3400BA140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CBE39C27BE94B100BA140D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		84CBE39F27BEA39B00BA140D /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		84CBE3A227BEA81900BA140D /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jsonplaceholder_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2045EC12EECBBCC6F3A200C /* Pods-jsonplaceholder-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jsonplaceholder-api.release.xcconfig"; path = "Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +98,9 @@
 		84CBE39827BE931B00BA140D /* user-list-module */ = {
 			isa = PBXGroup;
 			children = (
-				84CBE38727BE0A3200BA140D /* ViewController.swift */,
+				84CBE39E27BEA06A00BA140D /* View */,
+				84CBE3A427BEA86300BA140D /* Interactor */,
+				84CBE3A127BEA80300BA140D /* Entity */,
 			);
 			path = "user-list-module";
 			sourceTree = "<group>";
@@ -123,6 +129,30 @@
 				84CBE39C27BE94B100BA140D /* AppConstants.swift */,
 			);
 			path = "common-utils";
+			sourceTree = "<group>";
+		};
+		84CBE39E27BEA06A00BA140D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE38727BE0A3200BA140D /* UserListViewController.swift */,
+				84CBE39F27BEA39B00BA140D /* UserListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84CBE3A127BEA80300BA140D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3A227BEA81900BA140D /* UserEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		84CBE3A427BEA86300BA140D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		EFE1D6C073F885E603A3B567 /* Pods */ = {
@@ -249,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CBE38827BE0A3200BA140D /* ViewController.swift in Sources */,
+				84CBE3A027BEA39B00BA140D /* UserListTableViewCell.swift in Sources */,
+				84CBE3A327BEA81900BA140D /* UserEntity.swift in Sources */,
+				84CBE38827BE0A3200BA140D /* UserListViewController.swift in Sources */,
 				84CBE38427BE0A3200BA140D /* AppDelegate.swift in Sources */,
 				84CBE38627BE0A3200BA140D /* SceneDelegate.swift in Sources */,
 				84CBE39D27BE94B100BA140D /* AppConstants.swift in Sources */,
