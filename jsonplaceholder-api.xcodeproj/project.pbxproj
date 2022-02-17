@@ -13,9 +13,11 @@
 		84CBE38B27BE0A3200BA140D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CBE38927BE0A3200BA140D /* Main.storyboard */; };
 		84CBE38D27BE0A3400BA140D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CBE38C27BE0A3400BA140D /* Assets.xcassets */; };
 		84CBE39027BE0A3400BA140D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CBE38E27BE0A3400BA140D /* LaunchScreen.storyboard */; };
+		A3007227651268DF2609B6A5 /* Pods_jsonplaceholder_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		755593E0114EB16E7D4344F9 /* Pods-jsonplaceholder-api.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jsonplaceholder-api.debug.xcconfig"; path = "Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api.debug.xcconfig"; sourceTree = "<group>"; };
 		84CBE38027BE0A3200BA140D /* jsonplaceholder-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jsonplaceholder-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CBE38327BE0A3200BA140D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CBE38527BE0A3200BA140D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		84CBE38C27BE0A3400BA140D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CBE38F27BE0A3400BA140D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CBE39127BE0A3400BA140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jsonplaceholder_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2045EC12EECBBCC6F3A200C /* Pods-jsonplaceholder-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jsonplaceholder-api.release.xcconfig"; path = "Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3007227651268DF2609B6A5 /* Pods_jsonplaceholder_api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24446CEA86E9CC0AB7A3618A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84CBE37727BE0A3200BA140D = {
 			isa = PBXGroup;
 			children = (
 				84CBE38227BE0A3200BA140D /* jsonplaceholder-api */,
 				84CBE38127BE0A3200BA140D /* Products */,
+				EFE1D6C073F885E603A3B567 /* Pods */,
+				24446CEA86E9CC0AB7A3618A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = "jsonplaceholder-api";
 			sourceTree = "<group>";
 		};
+		EFE1D6C073F885E603A3B567 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				755593E0114EB16E7D4344F9 /* Pods-jsonplaceholder-api.debug.xcconfig */,
+				C2045EC12EECBBCC6F3A200C /* Pods-jsonplaceholder-api.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84CBE39427BE0A3400BA140D /* Build configuration list for PBXNativeTarget "jsonplaceholder-api" */;
 			buildPhases = (
+				3390D6615149324646419451 /* [CP] Check Pods Manifest.lock */,
 				84CBE37C27BE0A3200BA140D /* Sources */,
 				84CBE37D27BE0A3200BA140D /* Frameworks */,
 				84CBE37E27BE0A3200BA140D /* Resources */,
+				430BB2F3292FD37370918EF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3390D6615149324646419451 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-jsonplaceholder-api-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		430BB2F3292FD37370918EF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84CBE37C27BE0A3200BA140D /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		84CBE39527BE0A3400BA140D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 755593E0114EB16E7D4344F9 /* Pods-jsonplaceholder-api.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		84CBE39627BE0A3400BA140D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2045EC12EECBBCC6F3A200C /* Pods-jsonplaceholder-api.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
