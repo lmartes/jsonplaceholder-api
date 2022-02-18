@@ -15,4 +15,5 @@ class UserListTableViewCell: UITableViewCell {
         phone.text = user.getPhone()
         email.text = user.getEmail()
     }
+    
 }

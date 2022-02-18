@@ -17,6 +17,9 @@
 		84CBE3A027BEA39B00BA140D /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE39F27BEA39B00BA140D /* UserListTableViewCell.swift */; };
 		84CBE3A327BEA81900BA140D /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3A227BEA81900BA140D /* UserEntity.swift */; };
 		84CBE3A727BF038100BA140D /* UserListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3A627BF038100BA140D /* UserListProtocols.swift */; };
+		84CBE3AA27BF169600BA140D /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3A927BF169600BA140D /* UserListPresenter.swift */; };
+		84CBE3AC27BF16D900BA140D /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3AB27BF16D900BA140D /* UserListInteractor.swift */; };
+		84CBE3AF27BF263C00BA140D /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3AE27BF263C00BA140D /* UserListRouter.swift */; };
 		A3007227651268DF2609B6A5 /* Pods_jsonplaceholder_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		84CBE39F27BEA39B00BA140D /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		84CBE3A227BEA81900BA140D /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		84CBE3A627BF038100BA140D /* UserListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListProtocols.swift; sourceTree = "<group>"; };
+		84CBE3A927BF169600BA140D /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
+		84CBE3AB27BF16D900BA140D /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
+		84CBE3AE27BF263C00BA140D /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
 		A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jsonplaceholder_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2045EC12EECBBCC6F3A200C /* Pods-jsonplaceholder-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jsonplaceholder-api.release.xcconfig"; path = "Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +109,9 @@
 				84CBE3A527BF036800BA140D /* Protocols */,
 				84CBE39E27BEA06A00BA140D /* View */,
 				84CBE3A427BEA86300BA140D /* Interactor */,
+				84CBE3A827BF168000BA140D /* Presenter */,
 				84CBE3A127BEA80300BA140D /* Entity */,
+				84CBE3AD27BF25E300BA140D /* Router */,
 			);
 			path = "user-list-module";
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 		84CBE3A427BEA86300BA140D /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				84CBE3AB27BF16D900BA140D /* UserListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -164,6 +173,22 @@
 				84CBE3A627BF038100BA140D /* UserListProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84CBE3A827BF168000BA140D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3A927BF169600BA140D /* UserListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		84CBE3AD27BF25E300BA140D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3AE27BF263C00BA140D /* UserListRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		EFE1D6C073F885E603A3B567 /* Pods */ = {
@@ -295,8 +320,11 @@
 				84CBE3A727BF038100BA140D /* UserListProtocols.swift in Sources */,
 				84CBE38827BE0A3200BA140D /* UserListViewController.swift in Sources */,
 				84CBE38427BE0A3200BA140D /* AppDelegate.swift in Sources */,
+				84CBE3AA27BF169600BA140D /* UserListPresenter.swift in Sources */,
 				84CBE38627BE0A3200BA140D /* SceneDelegate.swift in Sources */,
+				84CBE3AC27BF16D900BA140D /* UserListInteractor.swift in Sources */,
 				84CBE39D27BE94B100BA140D /* AppConstants.swift in Sources */,
+				84CBE3AF27BF263C00BA140D /* UserListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
