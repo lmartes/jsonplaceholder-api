@@ -9,7 +9,7 @@ protocol ViewToPresenterUserPostProtocol: AnyObject {
 }
 
 protocol PresenterToViewUserPostProtocol: AnyObject {
-    func showUserPost(with posts: [PostEntity])
+    func showUserPost(with posts: [PostEntity], userData: UserEntity)
     func showError(_ error: Error)
 }
 

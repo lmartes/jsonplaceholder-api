@@ -17,7 +17,10 @@ class UserPostPresenter: ViewToPresenterUserPostProtocol {
 
 extension UserPostPresenter: InteractorToPresenterUserPostProtocol {
     func userPostFetchedSuccess(userPosts: [PostEntity]) {
-        view?.showUserPost(with: userPosts)
+        guard let user = user else {
+            return
+        }
+        view?.showUserPost(with: userPosts, userData: user)
     }
     
     func userPostFetchFailed(with error: Error) {
