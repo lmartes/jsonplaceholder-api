@@ -13,7 +13,7 @@ class UserListViewController: UIViewController {
         UserListRouter.createUserListModule(userListReference: self)
         setDelegates()
         presenter?.startFetchingUserList()
-        SVProgressHUD.show()
+        SVProgressHUD.show(withStatus: "Cargando...")
     }
     
     private func setDelegates() {
@@ -29,7 +29,10 @@ extension UserListViewController: PresenterToViewProtocol {
     func showUserList(with users: [UserEntity]) {
         userList = users
         tableView.reloadData()
-        SVProgressHUD.dismiss()
+        
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+        }
     }
     
     func showError(_ error: Error) {
