@@ -84,7 +84,14 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.showUserPostView(with: userList[indexPath.row], from: self)
+        let user: UserEntity
+        if isFiltering {
+            user = filteredUserList[indexPath.row]
+        } else {
+            user = userList[indexPath.row]
+        }
+        
+        presenter?.showUserPostView(with: user, from: self)
     }
     
 }
