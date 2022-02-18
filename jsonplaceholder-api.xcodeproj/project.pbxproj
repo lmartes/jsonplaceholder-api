@@ -20,6 +20,7 @@
 		84CBE3AA27BF169600BA140D /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3A927BF169600BA140D /* UserListPresenter.swift */; };
 		84CBE3AC27BF16D900BA140D /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3AB27BF16D900BA140D /* UserListInteractor.swift */; };
 		84CBE3AF27BF263C00BA140D /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3AE27BF263C00BA140D /* UserListRouter.swift */; };
+		84CBE3B327BF507D00BA140D /* PersistenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3B227BF507D00BA140D /* PersistenceUtils.swift */; };
 		A3007227651268DF2609B6A5 /* Pods_jsonplaceholder_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		84CBE3A927BF169600BA140D /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 		84CBE3AB27BF16D900BA140D /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
 		84CBE3AE27BF263C00BA140D /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
+		84CBE3B227BF507D00BA140D /* PersistenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUtils.swift; sourceTree = "<group>"; };
 		A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jsonplaceholder_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2045EC12EECBBCC6F3A200C /* Pods-jsonplaceholder-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jsonplaceholder-api.release.xcconfig"; path = "Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +139,8 @@
 		84CBE39B27BE946D00BA140D /* common-utils */ = {
 			isa = PBXGroup;
 			children = (
-				84CBE39C27BE94B100BA140D /* AppConstants.swift */,
+				84CBE3B027BF503200BA140D /* app-constants */,
+				84CBE3B127BF503F00BA140D /* app-defaults */,
 			);
 			path = "common-utils";
 			sourceTree = "<group>";
@@ -189,6 +192,22 @@
 				84CBE3AE27BF263C00BA140D /* UserListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		84CBE3B027BF503200BA140D /* app-constants */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE39C27BE94B100BA140D /* AppConstants.swift */,
+			);
+			path = "app-constants";
+			sourceTree = "<group>";
+		};
+		84CBE3B127BF503F00BA140D /* app-defaults */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3B227BF507D00BA140D /* PersistenceUtils.swift */,
+			);
+			path = "app-defaults";
 			sourceTree = "<group>";
 		};
 		EFE1D6C073F885E603A3B567 /* Pods */ = {
@@ -321,6 +340,7 @@
 				84CBE38827BE0A3200BA140D /* UserListViewController.swift in Sources */,
 				84CBE38427BE0A3200BA140D /* AppDelegate.swift in Sources */,
 				84CBE3AA27BF169600BA140D /* UserListPresenter.swift in Sources */,
+				84CBE3B327BF507D00BA140D /* PersistenceUtils.swift in Sources */,
 				84CBE38627BE0A3200BA140D /* SceneDelegate.swift in Sources */,
 				84CBE3AC27BF16D900BA140D /* UserListInteractor.swift in Sources */,
 				84CBE39D27BE94B100BA140D /* AppConstants.swift in Sources */,

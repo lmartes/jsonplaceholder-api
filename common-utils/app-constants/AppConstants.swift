@@ -11,3 +11,7 @@ struct Identifier {
     static let userListViewController = "userListViewControllerIdentifier"
     static let userListCell = "UserListCellIdentifier"
 }
+
+struct UserDefaultsKeys {
+    static let userList = "UserListDefaults"
+}

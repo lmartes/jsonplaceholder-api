@@ -6,6 +6,11 @@ class UserListInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
     
     func fetchUserList() {
+        if let userListDefaults = PersistenceUtils().getUserDefaults(UserDefaultsKeys.userList), userListDefaults.isEmpty == false {
+            presenter?.userListFetchedSuccess(userList: userListDefaults)
+            return
+        }
+        
         AF.request(API_USER_LIST).response { (response) in
             self.handleResponse(requestResponse: response)
         }
@@ -19,6 +24,7 @@ class UserListInteractor: PresenterToInteractorProtocol {
         
         if let data = requestResponse.data {
             let userList = parseJSON(data)
+            PersistenceUtils().saveUserDefaults(userList)
             presenter?.userListFetchedSuccess(userList: userList)
         }
     }
@@ -31,4 +37,5 @@ class UserListInteractor: PresenterToInteractorProtocol {
         }
         return decoderData
     }
+    
 }
