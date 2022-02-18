@@ -11,7 +11,7 @@ class PersistenceUtils {
         UserDefaults.standard.synchronize()
     }
     
-    func getUserDefaults(_ key:String) -> [UserEntity]? {
+    func getUserDefaults() -> [UserEntity] {
         guard let userListDefaults = UserDefaults.standard.string(forKey: UserDefaultsKeys.userList) else {
             return []
         }
@@ -22,6 +22,10 @@ class PersistenceUtils {
         }
         
         return userList
+    }
+    
+    func userListOnUserDefaultsIsEmpty() -> Bool {
+        return PersistenceUtils().getUserDefaults().isEmpty
     }
     
 }

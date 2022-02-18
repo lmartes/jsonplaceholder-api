@@ -4,9 +4,11 @@ import ObjectMapper
 
 class UserListInteractor: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
+    var persistenceUtils: PersistenceUtils = PersistenceUtils()
     
     func fetchUserList() {
-        if let userListDefaults = PersistenceUtils().getUserDefaults(UserDefaultsKeys.userList), userListDefaults.isEmpty == false {
+        if persistenceUtils.userListOnUserDefaultsIsEmpty() == false {
+            let userListDefaults = persistenceUtils.getUserDefaults()
             presenter?.userListFetchedSuccess(userList: userListDefaults)
             return
         }
@@ -24,7 +26,7 @@ class UserListInteractor: PresenterToInteractorProtocol {
         
         if let data = requestResponse.data {
             let userList = parseJSON(data)
-            PersistenceUtils().saveUserDefaults(userList)
+            persistenceUtils.saveUserDefaults(userList)
             presenter?.userListFetchedSuccess(userList: userList)
         }
     }
