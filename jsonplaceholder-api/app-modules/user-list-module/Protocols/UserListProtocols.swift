@@ -1,30 +1,30 @@
 import Foundation
 import UIKit
 
-protocol ViewToPresenterProtocol {
-    var view: PresenterToViewProtocol? { get set }
-    var interactor: PresenterToInteractorProtocol? { get set }
-    var router: PresenterToRouterProtocol? { get set }
+protocol ViewToPresenterUserListProtocol {
+    var view: PresenterToViewUserListProtocol? { get set }
+    var interactor: PresenterToInteractorUserListProtocol? { get set }
+    var router: PresenterToRouterUserListProtocol? { get set }
     func startFetchingUserList()
     func showUserPostView(with user: UserEntity, from view: UIViewController)
 }
 
-protocol PresenterToViewProtocol {
+protocol PresenterToViewUserListProtocol {
     func showUserList(with users: [UserEntity])
     func showError(_ error: Error)
 }
 
-protocol PresenterToRouterProtocol {
+protocol PresenterToRouterUserListProtocol {
     static func createUserListModule(userListReference: UserListViewController)
     func pushToUserPost(with user: UserEntity, from view: UIViewController)
 }
 
-protocol PresenterToInteractorProtocol {
-    var presenter: InteractorToPresenterProtocol? { get set }
+protocol PresenterToInteractorUserListProtocol {
+    var presenter: InteractorToPresenterUserListProtocol? { get set }
     func fetchUserList()
 }
 
-protocol InteractorToPresenterProtocol {
+protocol InteractorToPresenterUserListProtocol {
     func userListFetchedSuccess(userList: [UserEntity])
     func userListFetchFailed(with error: Error)
 }
