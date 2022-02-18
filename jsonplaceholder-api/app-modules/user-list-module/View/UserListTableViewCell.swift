@@ -10,4 +10,9 @@ class UserListTableViewCell: UITableViewCell {
         // Initialization code
     }    
 
+    func setupView(user: UserEntity) {
+        name.text = user.getName()
+        phone.text = user.getPhone()
+        email.text = user.getEmail()
+    }
 }
