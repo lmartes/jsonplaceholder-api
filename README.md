@@ -1,5 +1,5 @@
 # jsonplaceholder-api
-This project consumes the free resources of: https://jsonplaceholder.typicode.com/ implementing the viper clean architecture pattern
+This project consumes the free resources of: https://jsonplaceholder.typicode.com/ implementing the viper clean architecture pattern.
 
 # Dependencies used
 In this project I have implemented the use of cocoapods, such as:
