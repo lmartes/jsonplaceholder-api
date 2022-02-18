@@ -53,10 +53,19 @@ extension UserListViewController: UISearchBarDelegate {
         
         if searchText.isEmpty == false {
             filteredUserList = userList.filter({ $0.getName().contains(searchText) })
+            if filteredUserList.isEmpty {
+                showMessageForFilteredEmpty()
+            }
             isFiltering = true
         }
         
         tableView.reloadData()
+    }
+    
+    private func showMessageForFilteredEmpty() {
+        let alert = UIAlertController(title: "Alert", message: "List is empty", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
