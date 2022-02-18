@@ -1,10 +1,9 @@
 import Foundation
 import UIKit
 
-class UserListRouter: PresenterToRouterProtocol {
+class UserListRouter: PresenterToRouterUserListProtocol {
     static func createUserListModule(userListReference: UserListViewController) {
-        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = UserListPresenter()
-        
+        let presenter: ViewToPresenterUserListProtocol & InteractorToPresenterUserListProtocol = UserListPresenter()
         userListReference.presenter = presenter
         userListReference.presenter?.router = UserListRouter()
         userListReference.presenter?.view = userListReference
@@ -12,12 +11,12 @@ class UserListRouter: PresenterToRouterProtocol {
         userListReference.presenter?.interactor?.presenter = presenter
     }
     
-    static var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: Storyboard.mainStoryboard, bundle: Bundle.main)
-    }
-    
     func pushToUserPost(with user: UserEntity, from view: UIViewController) {
-        print("Push to user porst")
+        guard let UserPostViewController = view.storyboard?.instantiateViewController(withIdentifier: Identifier.userPostViewController) as? UserPostViewController else {
+            return
+        }
+        UserPostRouter.createUserPostModule(userPostReference: UserPostViewController, and: user)
+        view.navigationController?.pushViewController(UserPostViewController, animated: true)
     }
     
 }

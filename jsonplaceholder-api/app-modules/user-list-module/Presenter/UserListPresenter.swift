@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 
-class UserListPresenter: ViewToPresenterProtocol {
-    var view: PresenterToViewProtocol?
-    var interactor: PresenterToInteractorProtocol?
-    var router: PresenterToRouterProtocol?
+class UserListPresenter: ViewToPresenterUserListProtocol {
+    var view: PresenterToViewUserListProtocol?
+    var interactor: PresenterToInteractorUserListProtocol?
+    var router: PresenterToRouterUserListProtocol?
     
     func startFetchingUserList() {
         interactor?.fetchUserList()
@@ -16,7 +16,7 @@ class UserListPresenter: ViewToPresenterProtocol {
     
 }
 
-extension UserListPresenter: InteractorToPresenterProtocol {
+extension UserListPresenter: InteractorToPresenterUserListProtocol {
     func userListFetchedSuccess(userList: [UserEntity]) {
         view?.showUserList(with: userList)
     }

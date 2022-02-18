@@ -5,7 +5,7 @@ class UserListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var presenter: ViewToPresenterProtocol?
+    var presenter: ViewToPresenterUserListProtocol?
     var userList: [UserEntity] = []
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class UserListViewController: UIViewController {
 }
 
 //MARK: - PresenterToView
-extension UserListViewController: PresenterToViewProtocol {
+extension UserListViewController: PresenterToViewUserListProtocol {
     func showUserList(with users: [UserEntity]) {
         userList = users
         tableView.reloadData()

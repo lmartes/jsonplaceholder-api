@@ -21,6 +21,13 @@
 		84CBE3AC27BF16D900BA140D /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3AB27BF16D900BA140D /* UserListInteractor.swift */; };
 		84CBE3AF27BF263C00BA140D /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3AE27BF263C00BA140D /* UserListRouter.swift */; };
 		84CBE3B327BF507D00BA140D /* PersistenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3B227BF507D00BA140D /* PersistenceUtils.swift */; };
+		84CBE3B727BF72D900BA140D /* UserPostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3B627BF72D900BA140D /* UserPostProtocols.swift */; };
+		84CBE3BA27BF77C200BA140D /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3B927BF77C200BA140D /* PostEntity.swift */; };
+		84CBE3BD27BF790200BA140D /* UserPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3BC27BF790200BA140D /* UserPostTableViewCell.swift */; };
+		84CBE3BF27BF792800BA140D /* UserPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3BE27BF792800BA140D /* UserPostViewController.swift */; };
+		84CBE3C227BF7CF400BA140D /* UserPostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3C127BF7CF400BA140D /* UserPostRouter.swift */; };
+		84CBE3C527BF80A400BA140D /* UserPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3C427BF80A400BA140D /* UserPostPresenter.swift */; };
+		84CBE3C827BF823200BA140D /* UserPostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBE3C727BF823200BA140D /* UserPostInteractor.swift */; };
 		A3007227651268DF2609B6A5 /* Pods_jsonplaceholder_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +49,13 @@
 		84CBE3AB27BF16D900BA140D /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
 		84CBE3AE27BF263C00BA140D /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
 		84CBE3B227BF507D00BA140D /* PersistenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUtils.swift; sourceTree = "<group>"; };
+		84CBE3B627BF72D900BA140D /* UserPostProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostProtocols.swift; sourceTree = "<group>"; };
+		84CBE3B927BF77C200BA140D /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
+		84CBE3BC27BF790200BA140D /* UserPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostTableViewCell.swift; sourceTree = "<group>"; };
+		84CBE3BE27BF792800BA140D /* UserPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostViewController.swift; sourceTree = "<group>"; };
+		84CBE3C127BF7CF400BA140D /* UserPostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostRouter.swift; sourceTree = "<group>"; };
+		84CBE3C427BF80A400BA140D /* UserPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostPresenter.swift; sourceTree = "<group>"; };
+		84CBE3C727BF823200BA140D /* UserPostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostInteractor.swift; sourceTree = "<group>"; };
 		A91D82E1A8E68FB789B937C4 /* Pods_jsonplaceholder_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jsonplaceholder_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2045EC12EECBBCC6F3A200C /* Pods-jsonplaceholder-api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jsonplaceholder-api.release.xcconfig"; path = "Target Support Files/Pods-jsonplaceholder-api/Pods-jsonplaceholder-api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				84CBE39827BE931B00BA140D /* user-list-module */,
+				84CBE3B427BF72A100BA140D /* user-post-module */,
 			);
 			path = "app-modules";
 			sourceTree = "<group>";
@@ -208,6 +223,68 @@
 				84CBE3B227BF507D00BA140D /* PersistenceUtils.swift */,
 			);
 			path = "app-defaults";
+			sourceTree = "<group>";
+		};
+		84CBE3B427BF72A100BA140D /* user-post-module */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3B527BF72BF00BA140D /* Protocols */,
+				84CBE3BB27BF78EA00BA140D /* View */,
+				84CBE3C627BF821500BA140D /* Interactor */,
+				84CBE3C327BF808700BA140D /* Presenter */,
+				84CBE3B827BF77A800BA140D /* Entity */,
+				84CBE3C027BF7CDB00BA140D /* Router */,
+			);
+			path = "user-post-module";
+			sourceTree = "<group>";
+		};
+		84CBE3B527BF72BF00BA140D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3B627BF72D900BA140D /* UserPostProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84CBE3B827BF77A800BA140D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3B927BF77C200BA140D /* PostEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		84CBE3BB27BF78EA00BA140D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3BE27BF792800BA140D /* UserPostViewController.swift */,
+				84CBE3BC27BF790200BA140D /* UserPostTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84CBE3C027BF7CDB00BA140D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3C127BF7CF400BA140D /* UserPostRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		84CBE3C327BF808700BA140D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3C427BF80A400BA140D /* UserPostPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		84CBE3C627BF821500BA140D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				84CBE3C727BF823200BA140D /* UserPostInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		EFE1D6C073F885E603A3B567 /* Pods */ = {
@@ -334,15 +411,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CBE3B727BF72D900BA140D /* UserPostProtocols.swift in Sources */,
 				84CBE3A027BEA39B00BA140D /* UserListTableViewCell.swift in Sources */,
 				84CBE3A327BEA81900BA140D /* UserEntity.swift in Sources */,
+				84CBE3C827BF823200BA140D /* UserPostInteractor.swift in Sources */,
 				84CBE3A727BF038100BA140D /* UserListProtocols.swift in Sources */,
 				84CBE38827BE0A3200BA140D /* UserListViewController.swift in Sources */,
+				84CBE3C227BF7CF400BA140D /* UserPostRouter.swift in Sources */,
+				84CBE3C527BF80A400BA140D /* UserPostPresenter.swift in Sources */,
 				84CBE38427BE0A3200BA140D /* AppDelegate.swift in Sources */,
+				84CBE3BD27BF790200BA140D /* UserPostTableViewCell.swift in Sources */,
 				84CBE3AA27BF169600BA140D /* UserListPresenter.swift in Sources */,
+				84CBE3BF27BF792800BA140D /* UserPostViewController.swift in Sources */,
 				84CBE3B327BF507D00BA140D /* PersistenceUtils.swift in Sources */,
 				84CBE38627BE0A3200BA140D /* SceneDelegate.swift in Sources */,
 				84CBE3AC27BF16D900BA140D /* UserListInteractor.swift in Sources */,
+				84CBE3BA27BF77C200BA140D /* PostEntity.swift in Sources */,
 				84CBE39D27BE94B100BA140D /* AppConstants.swift in Sources */,
 				84CBE3AF27BF263C00BA140D /* UserListRouter.swift in Sources */,
 			);

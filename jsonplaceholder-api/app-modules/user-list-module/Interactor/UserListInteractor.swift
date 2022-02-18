@@ -2,8 +2,8 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-class UserListInteractor: PresenterToInteractorProtocol {
-    var presenter: InteractorToPresenterProtocol?
+class UserListInteractor: PresenterToInteractorUserListProtocol {
+    var presenter: InteractorToPresenterUserListProtocol?
     var persistenceUtils: PersistenceUtils = PersistenceUtils()
     
     func fetchUserList() {
