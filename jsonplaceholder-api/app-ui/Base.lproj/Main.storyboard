@@ -156,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WL0-eU-HKJ">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WL0-eU-HKJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leonardo Martes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY1-F9-nHp">
@@ -271,6 +271,7 @@
                         <outlet property="name" destination="xY1-F9-nHp" id="r9h-P7-VNx"/>
                         <outlet property="phone" destination="aXm-I5-SXk" id="7NO-hc-RLb"/>
                         <outlet property="tableView" destination="kBl-XO-ajn" id="tiA-IA-2yP"/>
+                        <outlet property="userDataView" destination="WL0-eU-HKJ" id="GgS-lE-v4X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQk-ee-1av" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

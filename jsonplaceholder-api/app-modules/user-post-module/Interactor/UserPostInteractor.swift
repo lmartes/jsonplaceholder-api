@@ -6,7 +6,6 @@ class UserPostInteractor: PresenterToInteractorUserPostProtocol {
     var presenter: InteractorToPresenterUserPostProtocol?
     
     func fetchUserPost(with user: UserEntity) {
-        print("request to: ", API_POST_LIST + "\(user.getId())")
         AF.request(API_POST_LIST + "\(user.getId())").response { (response) in
             self.handleResponse(requestResponse: response)
         }

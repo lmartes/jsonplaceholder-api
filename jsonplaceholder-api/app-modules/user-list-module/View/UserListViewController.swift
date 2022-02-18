@@ -7,6 +7,8 @@ class UserListViewController: UIViewController {
     
     var presenter: ViewToPresenterUserListProtocol?
     var userList: [UserEntity] = []
+    var filteredUserList: [UserEntity] = []
+    var isFiltering: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,14 @@ extension UserListViewController: PresenterToViewUserListProtocol {
 //MARK: - Search Bar Delegate
 extension UserListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("User entered: ", searchText)
+        filteredUserList = userList
+        
+        if searchText.isEmpty == false {
+            filteredUserList = userList.filter({ $0.getName().contains(searchText) })
+            isFiltering = true
+        }
+        
+        tableView.reloadData()
     }
     
 }
@@ -55,14 +64,22 @@ extension UserListViewController: UISearchBarDelegate {
 //MARK: - Table View Delegate
 extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userList.count
+        return isFiltering ? filteredUserList.count : userList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let userListCell = tableView.dequeueReusableCell(withIdentifier: Identifier.userListCell) as? UserListTableViewCell else {
             return UITableViewCell()
         }
-        userListCell.setupView(user: userList[indexPath.row])
+        
+        let user: UserEntity
+        if isFiltering {
+            user = filteredUserList[indexPath.row]
+        } else {
+            user = userList[indexPath.row]
+        }
+        
+        userListCell.setupView(user: user)
         return userListCell
     }
     
