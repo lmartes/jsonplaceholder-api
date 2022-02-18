@@ -2,6 +2,7 @@ import UIKit
 import SVProgressHUD
 
 class UserPostViewController: UIViewController {
+    @IBOutlet weak var userDataView: UIView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var email: UILabel!
@@ -23,9 +24,14 @@ class UserPostViewController: UIViewController {
     }
     
     private func setupView(with userData: UserEntity) {
+        showUserData()
         name.text = userData.getName()
         phone.text = userData.getPhone()
         email.text = userData.getEmail()
+    }
+    
+    private func showUserData() {
+        userDataView.isHidden = false
     }
 }
 
